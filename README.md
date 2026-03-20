@@ -1,16 +1,62 @@
-# React + Vite
+# Work Travel Log App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight web application designed for field technicians to log daily travel activity quickly and accurately.
 
-Currently, two official plugins are available:
+The app allows users to record multiple trips per day, including departure times, destinations, vehicle kilometers, and fuel levels, and provides a structured preview for manual logbook entry.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## Purpose
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+In many field service workflows, technicians are required to:
 
-## Expanding the ESLint configuration
+- Track multiple daily trips
+- Record exact vehicle kilometers at each destination
+- Maintain a written logbook at the end of the day
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+This application eliminates the need for screenshots and memory-based tracking by providing a simple, structured interface to record all travel data in real time.
+
+---
+
+## Features
+
+- Daily travel logging with multiple entries
+- Fields per trip:
+  - Name (Ονομα)
+  - Date (Ημερομηνια)
+  - Departure time (Ωρα αναχωρισης)
+  - Destination (Προορισμος)
+  - Arrival kilometers (ΧΛΜ αφιξης)
+  - Fuel percentage (Ποσοστο καυσιμου)
+  - Return/departure time
+- Automatic data persistence using local storage
+- Clean preview table matching manual logbook format
+- One-click name autofill across all entries
+- Input validation for kilometers and fuel percentage
+- Confirmation before clearing daily data
+
+---
+
+## How It Works
+
+- Each day is stored separately based on the selected date
+- Data is automatically saved in the browser (localStorage)
+- Users can close and reopen the app without losing data
+- The preview section provides a clean format for manual transcription
+
+---
+
+## Tech Stack
+
+- React (Vite)
+- Tailwind CSS
+- Local Storage (browser-based persistence)
+- Lucide Icons
+
+---
+
+## Installation (Local Development)
+
+```bash
+npm install
+npm run dev
